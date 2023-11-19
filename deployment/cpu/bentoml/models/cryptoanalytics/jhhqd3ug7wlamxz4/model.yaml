@@ -1,0 +1,19 @@
+name: cryptoanalytics
+version: jhhqd3ug7wlamxz4
+module: bentoml.pytorch_lightning
+labels: {}
+options:
+  partial_kwargs: {}
+metadata: {}
+context:
+  framework_name: pytorch_lightning
+  framework_versions:
+    torch: 2.1.1+cu118
+    pytorch_lightning: 1.7.7
+  bentoml_version: 1.1.7
+  python_version: 3.9.10
+signatures:
+  __call__:
+    batchable: false
+api_version: v1
+creation_time: '2023-11-19T17:01:31.822019+00:00'

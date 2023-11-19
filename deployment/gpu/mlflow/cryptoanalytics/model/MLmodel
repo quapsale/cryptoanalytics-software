@@ -1,0 +1,18 @@
+flavors:
+  python_function:
+    artifacts:
+      state_dict_model:
+        path: artifacts/lstm.pth
+        uri: lstm.pth
+    cloudpickle_version: 2.2.1
+    code: code
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.pyfunc.model
+    python_model: python_model.pkl
+    python_version: 3.9.10
+mlflow_version: 2.8.0
+model_size_bytes: 3093989
+model_uuid: c2f200ec2bdf4c398ad6cad85593274e
+utc_time_created: '2023-11-17 23:29:13.745634'

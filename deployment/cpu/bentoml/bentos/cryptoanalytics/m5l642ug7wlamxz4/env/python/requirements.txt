@@ -1,0 +1,9 @@
+scikit-learn
+pandas
+datetime
+statsmodels
+pydantic
+numpy
+torch
+torchvision
+torchaudio

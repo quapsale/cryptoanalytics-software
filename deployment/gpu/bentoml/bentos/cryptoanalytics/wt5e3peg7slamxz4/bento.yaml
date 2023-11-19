@@ -1,0 +1,58 @@
+service: service:svc
+name: cryptoanalytics
+version: wt5e3peg7slamxz4
+bentoml_version: 1.1.7
+creation_time: '2023-11-19T16:58:21.549709+00:00'
+labels:
+  owner: iiun-team
+  stage: dev
+models:
+- tag: cryptoanalytics:cjhwe3ug7slamxz4
+  module: bentoml.pytorch_lightning
+  creation_time: '2023-11-19T16:52:49.214170+00:00'
+runners:
+- name: cryptoanalytics
+  runnable_type: NewClass
+  embedded: false
+  models:
+  - cryptoanalytics:cjhwe3ug7slamxz4
+  resource_config: null
+apis:
+- name: cryptoanalytics
+  input_type: JSON
+  output_type: NumpyNdarray
+docker:
+  distro: debian
+  python_version: '3.9'
+  cuda_version: null
+  env: null
+  system_packages: null
+  setup_script: null
+  base_image: null
+  dockerfile_template: null
+python:
+  requirements_txt: null
+  packages:
+  - scikit-learn
+  - pandas
+  - datetime
+  - statsmodels
+  - pydantic
+  - numpy
+  - torch
+  - torchvision
+  - torchaudio
+  lock_packages: true
+  index_url: null
+  no_index: null
+  trusted_host: null
+  find_links: null
+  extra_index_url:
+  - https://download.pytorch.org/whl/cu118
+  pip_args: null
+  wheels: null
+conda:
+  environment_yml: null
+  channels: null
+  dependencies: null
+  pip: null

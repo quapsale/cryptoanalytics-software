@@ -1,0 +1,202 @@
+components:
+  schemas:
+    CryptoFeatures:
+      properties:
+        features:
+          items: {}
+          title: Features
+          type: array
+        n_steps:
+          title: N Steps
+          type: integer
+        target:
+          title: Target
+          type: string
+      required:
+      - n_steps
+      - target
+      - features
+      title: CryptoFeatures
+      type: object
+    InternalServerError:
+      description: Internal Server Error
+      properties:
+        msg:
+          title: Message
+          type: string
+        type:
+          title: Error Type
+          type: string
+      required:
+      - msg
+      - type
+      title: InternalServerError
+      type: object
+    InvalidArgument:
+      description: Bad Request
+      properties:
+        msg:
+          title: Message
+          type: string
+        type:
+          title: Error Type
+          type: string
+      required:
+      - msg
+      - type
+      title: InvalidArgument
+      type: object
+    NotFound:
+      description: Not Found
+      properties:
+        msg:
+          title: Message
+          type: string
+        type:
+          title: Error Type
+          type: string
+      required:
+      - msg
+      - type
+      title: NotFound
+      type: object
+info:
+  contact:
+    email: contact@bentoml.com
+    name: BentoML Team
+  description: "# cryptoanalytics:None\n\n[![pypi_status](https://img.shields.io/badge/BentoML-1.1.7-informational)](https://pypi.org/project/BentoML)\n\
+    [![documentation_status](https://readthedocs.org/projects/bentoml/badge/?version=latest)](https://docs.bentoml.com/)\n\
+    [![join_slack](https://badgen.net/badge/Join/BentoML%20Slack/cyan?icon=slack)](https://l.bentoml.com/join-slack-swagger)\n\
+    [![BentoML GitHub Repo](https://img.shields.io/github/stars/bentoml/bentoml?style=social)](https://github.com/bentoml/BentoML)\n\
+    [![Twitter Follow](https://img.shields.io/twitter/follow/bentomlai?label=Follow%20BentoML&style=social)](https://twitter.com/bentomlai)\n\
+    \nThis is a Machine Learning Service created with BentoML.\n| InferenceAPI | Input\
+    \ | Output |\n| ------------ | ----- | ------ |\n| POST [`/cryptoanalytics`](#operations-Service_APIs-cryptoanalytics__cryptoanalytics)\
+    \ | JSON | NumpyNdarray |\n\n\n\n\n## Help\n\n* [\U0001F4D6 Documentation](https://docs.bentoml.com/en/latest/):\
+    \ Learn how to use BentoML.\n* [\U0001F4AC Community](https://l.bentoml.com/join-slack-swagger):\
+    \ Join the BentoML Slack community.\n* [\U0001F41B GitHub Issues](https://github.com/bentoml/BentoML/issues):\
+    \ Report bugs and feature requests.\n* Tip: you can also [customize this README](https://docs.bentoml.com/en/latest/concepts/bento.html#description).\n"
+  title: cryptoanalytics
+  version: None
+openapi: 3.0.2
+paths:
+  /cryptoanalytics:
+    post:
+      consumes:
+      - application/json
+      description: ''
+      operationId: cryptoanalytics__cryptoanalytics
+      produces:
+      - application/json
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                features:
+                  items: {}
+                  title: Features
+                  type: array
+                n_steps:
+                  title: N Steps
+                  type: integer
+                target:
+                  title: Target
+                  type: string
+              required:
+              - n_steps
+              - target
+              - features
+              title: CryptoFeatures
+              type: object
+        required: true
+        x-bentoml-io-descriptor:
+          args:
+            has_json_encoder: false
+            has_pydantic_model: true
+          id: bentoml.io.JSON
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                items:
+                  type: integer
+                nullable: true
+                type: array
+          description: Successful Response
+          x-bentoml-io-descriptor:
+            args:
+              dtype: null
+              enforce_dtype: false
+              enforce_shape: false
+              shape: null
+            id: bentoml.io.NumpyNdarray
+        400:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidArgument'
+          description: Bad Request
+        404:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFound'
+          description: Not Found
+        500:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerError'
+          description: Internal Server Error
+      summary: "InferenceAPI(JSON \u2192 NumpyNdarray)"
+      tags:
+      - Service APIs
+      x-bentoml-name: cryptoanalytics
+  /healthz:
+    get:
+      description: Health check endpoint. Expecting an empty response with status
+        code <code>200</code> when the service is in health state. The <code>/healthz</code>
+        endpoint is <b>deprecated</b>. (since Kubernetes v1.16)
+      responses:
+        '200':
+          description: Successful Response
+      tags:
+      - Infrastructure
+  /livez:
+    get:
+      description: Health check endpoint for Kubernetes. Healthy endpoint responses
+        with a <code>200</code> OK status.
+      responses:
+        '200':
+          description: Successful Response
+      tags:
+      - Infrastructure
+  /metrics:
+    get:
+      description: Prometheus metrics endpoint. The <code>/metrics</code> responses
+        with a <code>200</code>. The output can then be used by a Prometheus sidecar
+        to scrape the metrics of the service.
+      responses:
+        '200':
+          description: Successful Response
+      tags:
+      - Infrastructure
+  /readyz:
+    get:
+      description: A <code>200</code> OK status from <code>/readyz</code> endpoint
+        indicated the service is ready to accept traffic. From that point and onward,
+        Kubernetes will use <code>/livez</code> endpoint to perform periodic health
+        checks.
+      responses:
+        '200':
+          description: Successful Response
+      tags:
+      - Infrastructure
+servers:
+- url: .
+tags:
+- description: BentoML Service API endpoints for inference.
+  name: Service APIs
+- description: Common infrastructure endpoints for observability.
+  name: Infrastructure
