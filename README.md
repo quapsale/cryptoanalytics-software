@@ -7,6 +7,10 @@ CryptoAnalytics is a software artifact for the analysis and forecasting of finan
 The Python version used in this project is 3.9.10. 
 It is suggested to create a clean virtual environment with the correct version using [pyenv](https://github.com/pyenv/pyenv).
 
+Please refer to [these](https://github.com/pyenv/pyenv#installation) instructions to install pyenv on your current OS. 
+To install pyenv-virtualenv as well, please follow [this](https://github.com/pyenv/pyenv-virtualenv#installation) documentation.
+
+Once pyenv has been set up, you can install the required Python version and generate a new virtual environment as it follows.
 
 ```bash
 pyenv install 3.9.10
