@@ -137,5 +137,8 @@ Args:
 ## Examples
 You can find examples of coin list (for data pull), configs (for pretraining/forecast) and feature variable list (for pretraining/forecast) in the directory /examples.
 
+## Risk Warning
+Please keep in mind that no one can predict prices of cryptocurrencies with total certainty. Our price predictions can serve as guidelines and indications of future price developments, but are not intended to be used as investment advices.
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
