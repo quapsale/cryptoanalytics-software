@@ -36,9 +36,9 @@ The demo uses a pre-built dataset (using the data_pull command) with the followi
 
 1. coins: "btc", "eth", "usdt", "usdc", "xrp", "busd", "ada", "doge".
 
-2. start: 01-11-2020.
+2. start: 15-08-2023.
 
-3. end: 01-11-2023.
+3. end: 15-11-2023.
 
 To launch the demo, start a reproducible run on our CodeOcean [capsule](https://codeocean.com/capsule/7158163/tree).
 
