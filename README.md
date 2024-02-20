@@ -140,5 +140,13 @@ You can find examples of coin list (for data pull), configs (for pretraining/for
 ## Risk Warning
 Please keep in mind that no one can predict prices of cryptocurrencies with total certainty. Our price predictions can serve as guidelines and indications of future price developments, but are not intended to be used as investment advices.
 
+## Authors
+<b>Pasquale De Rosa</b>, University of Neuchâtel, [pasquale.derosa@unine.ch](mailto:pasquale.derosa@unine.ch). <br/>
+Pascal Felber, University of Neuchâtel, [pascal.felber@unine.ch](mailto:pascal.felber@unine.ch). <br/>
+Valerio Schiavoni, University of Neuchâtel, [valerio.schiavoni@unine.ch](mailto:valerio.schiavoni@unine.ch).
+
+## References
+<li> <i> Pasquale De Rosa, Pascal Felber and Valerio Schiavoni. 2024. CryptoAnalytics: Cryptocoins price forecasting with machine learning techniques. In: SoftwareX, Volume 26, 101663. https://doi.org/10.1016/j.softx.2024.101663. </i></li>
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
